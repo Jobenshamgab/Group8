@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanam sa Bukid - Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src ="logowanam.png" alt = "wanam sa bukid logo" width="100" height="100">
+                <h1>Wanam sa Bukid</h1>
+                <p>Admin Dashboard</p>
+            </div>
+            
+            <div class="user-info">
+                <div class="avatar">SA</div>
+                <div class="user-details">
+                    <h3>Super Admin</h3>
+                    <p>admin@wanam.com</p>
+                </div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li class="active"><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="modules/ordering.html"><i class="fas fa-shopping-cart"></i> Ordering</a></li>
+                    <li><a href="reservation.html"><i class="fas fa-calendar-check"></i> Reservations</a></li>
+                    <li><a href="salesreport.html"><i class="fas fa-chart-line"></i> Sales Reports</a></li>
+                    <li><a href="#"><i class="fas fa-qrcode"></i> QR Generator</a></li>
+                    <li><a href="#"><i class="fas fa-book"></i> Menu Management</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+            
+            <div class="system-status">
+                <h3>System Status</h3>
+                <div class="status-item">
+                    <i class="fas fa-circle online"></i>
+                    <span>Online Orders</span>
+                    <span class="badge">24</span>
+                </div>
+                <div class="status-item">
+                    <i class="fas fa-circle busy"></i>
+                    <span>Active Reservations</span>
+                    <span class="badge">8</span>
+                </div>
+                <div class="status-item">
+                    <i class="fas fa-circle offline"></i>
+                    <span>Available Tables</span>
+                    <span class="badge">12</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <header>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="header-actions">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">5</span>
+                    </div>
+                    <div class="user-menu">
+                        <img src="https://ui-avatars.com/api/?name=Super+Admin&background=f11f1f&color=fff" alt="Admin">
+                        <span>Super Admin</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Dashboard Overview -->
+            <section class="dashboard-overview">
+                <h2>Dashboard Overview</h2>
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>₱24,580</h3>
+                            <p>Today's Revenue</p>
+                        </div>
+                        <div class="stat-trend up">
+                            <i class="fas fa-arrow-up"></i> 12.5%
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>42</h3>
+                            <p>Active Orders</p>
+                        </div>
+                        <div class="stat-trend down">
+                            <i class="fas fa-arrow-down"></i> 3.2%
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>18</h3>
+                            <p>Reservations Today</p>
+                        </div>
+                        <div class="stat-trend up">
+                            <i class="fas fa-arrow-up"></i> 8.7%
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>4.8/5</h3>
+                            <p>Customer Rating</p>
+                        </div>
+                        <div class="stat-trend">
+                            <i class="fas fa-minus"></i> 0.0%
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Modules Section -->
+            <section class="modules-section">
+                <!-- Ordering Module -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>Ordering Module</h3>
+                        <span class="badge">Active</span>
+                    </div>
+                    <div class="module-content">
+                        <div class="qr-section">
+                            <div class="qr-container">
+                                <div class="qr-code">
+                                    <!-- QR Code Placeholder -->
+                                    <div class="qr-pattern"></div>
+                                    <div class="qr-pattern"></div>
+                                    <div class="qr-pattern"></div>
+                                    <div class="qr-pattern"></div>
+                                    <div class="qr-pattern"></div>
+                                    <div class="qr-pattern"></div>
+                                    <div class="qr-pattern"></div>
+                                    <div class="qr-pattern"></div>
+                                    <div class="qr-pattern"></div>
+                                </div>
+                                <div class="qr-info">
+                                    <h4>Table #05</h4>
+                                    <p>Active QR Code</p>
+                                </div>
+                            </div>
+                            <div class="timer-section">
+                                <div class="timer-display">
+                                    <span id="minutes">30</span>:<span id="seconds">00</span>
+                                </div>
+                                <div class="timer-controls">
+                                    <button class="btn btn-pause"><i class="fas fa-pause"></i> Pause</button>
+                                    <button class="btn btn-reset"><i class="fas fa-redo"></i> Reset</button>
+                                </div>
+                                <p class="timer-note">QR Code will expire after 30 minutes</p>
+                            </div>
+                        </div>
+                        <div class="table-assignment">
+                            <h4>Assign Table</h4>
+                            <div class="tables-grid">
+                                <div class="table available">01</div>
+                                <div class="table occupied">02</div>
+                                <div class="table available">03</div>
+                                <div class="table reserved">04</div>
+                                <div class="table active">05</div>
+                                <div class="table available">06</div>
+                                <div class="table available">07</div>
+                                <div class="table occupied">08</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Reservation Module -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <i class="fas fa-calendar-check"></i>
+                        <h3>Reservation Module</h3>
+                        <span class="badge">8 Pending</span>
+                    </div>
+                    <div class="module-content">
+                        <div class="reservation-calendar">
+                            <div class="calendar-header">
+                                <button><i class="fas fa-chevron-left"></i></button>
+                                <h4>October 2023</h4>
+                                <button><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                            <div class="calendar-grid">
+                                <div class="day-name">Sun</div>
+                                <div class="day-name">Mon</div>
+                                <div class="day-name">Tue</div>
+                                <div class="day-name">Wed</div>
+                                <div class="day-name">Thu</div>
+                                <div class="day-name">Fri</div>
+                                <div class="day-name">Sat</div>
+                                
+                                <div class="day empty"></div>
+                                <div class="day empty"></div>
+                                <div class="day">1</div>
+                                <div class="day">2</div>
+                                <div class="day">3</div>
+                                <div class="day">4</div>
+                                <div class="day">5</div>
+                                
+                                <div class="day">6</div>
+                                <div class="day reserved">7</div>
+                                <div class="day reserved">8</div>
+                                <div class="day">9</div>
+                                <div class="day">10</div>
+                                <div class="day">11</div>
+                                <div class="day">12</div>
+                                
+                                <div class="day">13</div>
+                                <div class="day reserved">14</div>
+                                <div class="day">15</div>
+                                <div class="day">16</div>
+                                <div class="day reserved">17</div>
+                                <div class="day reserved">18</div>
+                                <div class="day">19</div>
+                                
+                                <div class="day">20</div>
+                                <div class="day">21</div>
+                                <div class="day reserved">22</div>
+                                <div class="day">23</div>
+                                <div class="day">24</div>
+                                <div class="day reserved">25</div>
+                                <div class="day">26</div>
+                                
+                                <div class="day">27</div>
+                                <div class="day">28</div>
+                                <div class="day reserved">29</div>
+                                <div class="day reserved">30</div>
+                                <div class="day">31</div>
+                            </div>
+                        </div>
+                        <div class="reservation-list">
+                            <h4>Today's Reservations</h4>
+                            <div class="reservation-item">
+                                <div class="reservation-time">
+                                    <span>12:30 PM</span>
+                                    <span>Table #04</span>
+                                </div>
+                                <div class="reservation-details">
+                                    <h5>Maria Santos</h5>
+                                    <p>Party of 4 - Birthday</p>
+                                </div>
+                                <div class="reservation-actions">
+                                    <button class="btn btn-confirm">Confirm</button>
+                                    <button class="btn btn-cancel">Cancel</button>
+                                </div>
+                            </div>
+                            
+                            <div class="reservation-item">
+                                <div class="reservation-time">
+                                    <span>2:15 PM</span>
+                                    <span>Table #08</span>
+                                </div>
+                                <div class="reservation-details">
+                                    <h5>John Dela Cruz</h5>
+                                    <p>Party of 2 - Anniversary</p>
+                                </div>
+                                <div class="reservation-actions">
+                                    <button class="btn btn-confirm">Confirm</button>
+                                    <button class="btn btn-cancel">Cancel</button>
+                                </div>
+                            </div>
+                            
+                            <div class="reservation-item">
+                                <div class="reservation-time">
+                                    <span>6:45 PM</span>
+                                    <span>Hall #2</span>
+                                </div>
+                                <div class="reservation-details">
+                                    <h5>ABC Corporation</h5>
+                                    <p>Company Event - 50 people</p>
+                                </div>
+                                <div class="reservation-actions">
+                                    <button class="btn btn-confirm">Confirm</button>
+                                    <button class="btn btn-cancel">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sales Report Module -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Sales Report Module</h3>
+                        <span class="badge">Today: ₱24,580</span>
+                    </div>
+                    <div class="module-content">
+                        <div class="report-tabs">
+                            <button class="tab-btn active">Daily</button>
+                            <button class="tab-btn">Weekly</button>
+                            <button class="tab-btn">Monthly</button>
+                            <button class="tab-btn">Yearly</button>
+                        </div>
+                        
+                        <div class="chart-container">
+                            <canvas id="salesChart"></canvas>
+                        </div>
+                        
+                        <div class="sales-summary">
+                            <div class="summary-item">
+                                <h4>₱24,580</h4>
+                                <p>Today's Revenue</p>
+                            </div>
+                            <div class="summary-item">
+                                <h4>₱168,400</h4>
+                                <p>Weekly Revenue</p>
+                            </div>
+                            <div class="summary-item">
+                                <h4>42</h4>
+                                <p>Orders Today</p>
+                            </div>
+                            <div class="summary-item">
+                                <h4>₱586</h4>
+                                <p>Avg. Order Value</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Menu Management Module -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <i class="fas fa-book"></i>
+                        <h3>Menu Management</h3>
+                    </div>
+                    <div class="module-content">
+                        <div class="menu-controls">
+                            <button class="btn btn-add"><i class="fas fa-plus"></i> Add New Dish</button>
+                            <div class="search-menu">
+                                <i class="fas fa-search"></i>
+                                <input type="text" placeholder="Search menu items...">
+                            </div>
+                        </div>
+                        
+                        <div class="menu-categories">
+                            <button class="category-btn active">All</button>
+                            <button class="category-btn">Appetizers</button>
+                            <button class="category-btn">Main Courses</button>
+                            <button class="category-btn">Desserts</button>
+                            <button class="category-btn">Drinks</button>
+                        </div>
+                        
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <div class="item-info">
+                                    <h4>Adobong Manok</h4>
+                                    <p>Classic chicken adobo with soy sauce, vinegar, and garlic</p>
+                                    <span class="price">₱220</span>
+                                </div>
+                                <div class="item-status available">
+                                    <i class="fas fa-check-circle"></i> Available
+                                </div>
+                                <div class="item-actions">
+                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-toggle"><i class="fas fa-toggle-on"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="item-info">
+                                    <h4>Sinigang na Baboy</h4>
+                                    <p>Pork sour soup with vegetables and tamarind broth</p>
+                                    <span class="price">₱280</span>
+                                </div>
+                                <div class="item-status available">
+                                    <i class="fas fa-check-circle"></i> Available
+                                </div>
+                                <div class="item-actions">
+                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-toggle"><i class="fas fa-toggle-on"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="item-info">
+                                    <h4>Lechon Kawali</h4>
+                                    <p>Crispy fried pork belly served with liver sauce</p>
+                                    <span class="price">₱320</span>
+                                </div>
+                                <div class="item-status unavailable">
+                                    <i class="fas fa-times-circle"></i> Unavailable
+                                </div>
+                                <div class="item-actions">
+                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-toggle"><i class="fas fa-toggle-off"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="item-info">
+                                    <h4>Halo-Halo Special</h4>
+                                    <p>Traditional Filipino dessert with mixed fruits, beans, and ice cream</p>
+                                    <span class="price">₱150</span>
+                                </div>
+                                <div class="item-status available">
+                                    <i class="fas fa-check-circle"></i> Available
+                                </div>
+                                <div class="item-actions">
+                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-toggle"><i class="fas fa-toggle-on"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
