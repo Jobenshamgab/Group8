@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanam sa Bukid - Sales Report Module</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="salesreport.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src ="logowanam.png" alt = "wanam sa bukid logo" width="100" height="100">
+                <h1>Wanam sa Bukid</h1>
+                <p>Admin Dashboard</p>
+            </div>
+            
+            <div class="user-info">
+                <div class="avatar">SA</div>
+                <div class="user-details">
+                    <h3>Super Admin</h3>
+                    <p>admin@wanam.com</p>
+                </div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="../dashboard.html"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a></li>
+                    <li><a href="ordering.html"><i class="fas fa-shopping-cart"></i> <span>Ordering</span></a></li>
+                    <li><a href="reservation.html"><i class="fas fa-calendar-check"></i> <span>Reservations</span></a></li>
+                    <li class="active"><a href="salesreport.html"><i class="fas fa-chart-line"></i> <span>Sales Reports</span></a></li>
+                    <li><a href="#"><i class="fas fa-qrcode"></i> <span>QR Generator</span></a></li>
+                    <li><a href="#"><i class="fas fa-book"></i> <span>Menu Management</span></a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> <span>Settings</span></a></li>
+                </ul>
+            </nav>
+            
+            <div class="system-status">
+                <h3>System Status</h3>
+                <div class="status-item">
+                    <i class="fas fa-circle online"></i>
+                    <span>Online Orders</span>
+                    <span class="badge">24</span>
+                </div>
+                <div class="status-item">
+                    <i class="fas fa-circle busy"></i>
+                    <span>Active Reservations</span>
+                    <span class="badge">8</span>
+                </div>
+                <div class="status-item">
+                    <i class="fas fa-circle offline"></i>
+                    <span>Available Tables</span>
+                    <span class="badge">12</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <header>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search sales reports...">
+                </div>
+                <div class="header-actions">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">5</span>
+                    </div>
+                    <div class="user-menu">
+                        <img src="https://ui-avatars.com/api/?name=Super+Admin&background=f11f1f&color=fff" alt="Admin">
+                        <span>Super Admin</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Sales Report Content -->
+            <div class="sales-report-container">
+                <div class="sales-report-header">
+                    <h2>Sales Report Module</h2>
+                    <div class="date-range-selector">
+                        <input type="date" id="start-date" value="2023-10-01">
+                        <span>to</span>
+                        <input type="date" id="end-date" value="2023-10-31">
+                        <button class="btn btn-export"><i class="fas fa-filter"></i> Apply</button>
+                    </div>
+                </div>
+                
+                <div class="module-card">
+                    <div class="module-header">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Sales Analytics</h3>
+                        <span class="badge">Active</span>
+                    </div>
+                    <div class="module-content">
+                        <div class="report-tabs">
+                            <button class="tab-btn active" data-period="daily">Daily</button>
+                            <button class="tab-btn" data-period="weekly">Weekly</button>
+                            <button class="tab-btn" data-period="monthly">Monthly</button>
+                            <button class="tab-btn" data-period="yearly">Yearly</button>
+                            <button class="tab-btn" data-period="summary">Summary</button>
+                        </div>
+                        
+                        <div class="chart-container">
+                            <div class="chart-title">Sales Performance (October 2023)</div>
+                            <canvas id="salesChart"></canvas>
+                        </div>
+                        
+                        <div class="summary-container">
+                            <div class="summary-card">
+                                <h4>₱24,580</h4>
+                                <p>Today's Revenue</p>
+                                <div class="trend up"><i class="fas fa-arrow-up"></i> 12.5% from yesterday</div>
+                            </div>
+                            <div class="summary-card">
+                                <h4>₱168,400</h4>
+                                <p>Weekly Revenue</p>
+                                <div class="trend up"><i class="fas fa-arrow-up"></i> 8.3% from last week</div>
+                            </div>
+                            <div class="summary-card">
+                                <h4>42</h4>
+                                <p>Orders Today</p>
+                                <div class="trend down"><i class="fas fa-arrow-down"></i> 3.2% from yesterday</div>
+                            </div>
+                            <div class="summary-card">
+                                <h4>₱586</h4>
+                                <p>Avg. Order Value</p>
+                                <div class="trend up"><i class="fas fa-arrow-up"></i> 5.1% from last week</div>
+                            </div>
+                        </div>
+                        
+                        <div class="detailed-report">
+                            <h3>Detailed Sales Report</h3>
+                            <table class="report-table">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Total Sales</th>
+                                        <th>Orders</th>
+                                        <th>Avg. Order Value</th>
+                                        <th>Top Selling Item</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Oct 30, 2023</td>
+                                        <td>₱24,580</td>
+                                        <td>42</td>
+                                        <td>₱586</td>
+                                        <td>Adobong Manok (12)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Oct 29, 2023</td>
+                                        <td>₱21,840</td>
+                                        <td>38</td>
+                                        <td>₱575</td>
+                                        <td>Sinigang na Baboy (10)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Oct 28, 2023</td>
+                                        <td>₱28,120</td>
+                                        <td>45</td>
+                                        <td>₱625</td>
+                                        <td>Lechon Kawali (15)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Oct 27, 2023</td>
+                                        <td>₱19,560</td>
+                                        <td>35</td>
+                                        <td>₱559</td>
+                                        <td>Kare-Kare (8)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Oct 26, 2023</td>
+                                        <td>₱22,340</td>
+                                        <td>41</td>
+                                        <td>₱545</td>
+                                        <td>Adobong Manok (11)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <div class="report-actions">
+                                <button class="btn btn-export"><i class="fas fa-file-export"></i> Export as CSV</button>
+                                <button class="btn btn-print"><i class="fas fa-print"></i> Print Report</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="salesreport.js"></script>
+</body>
+</html>
